@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="card shadow">
+            <div class="card-body">
+              <span class="badge text-bg-primary">Level 5</span>
+              <h2 class="h4 fw-bold mt-2">Counter: Coins</h2>
+              <p class="text-muted">
+                Use + and - buttons. Coins cannot go below 0.
+              </p>
+
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <button id="minusBtn" class="btn btn-outline-secondary">
+                  -1
+                </button>
+                <div class="fw-bold fs-5">Coins: <span id="coins">0</span></div>
+                <button id="plusBtn" class="btn btn-outline-secondary">
+                  +1
+                </button>
+              </div>
+
+              <p id="coinMsg" class="small text-muted mb-0">
+                Keep clicking and take a screenshot when coins changed.
+              </p>
+
+              <hr>
+
+              <div class="d-flex gap-2">
+                <button class="btn btn-secondary w-50" onclick="window.location.href = 'level4.html'">
+                  Back
+                </button>
+                <button class="btn btn-dark w-50" onclick="window.location.href = 'level6.html'">
+                  Next Level
+                </button>
+              </div>
+            </div>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let coins = 0;
+
+      const coinsSpan = document.getElementById("coins");
+      const plusBtn = document.getElementById("plusBtn");
+      const minusBtn = document.getElementById("minusBtn");
+
+      plusBtn.addEventListener("click", function () {
+        coins++;
+        coinsSpan.textContent = coins;
+      });
+
+      minusBtn.addEventListener("click", function () {
+        if (coins > 0) coins--;
+        coinsSpan.textContent = coins;
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
