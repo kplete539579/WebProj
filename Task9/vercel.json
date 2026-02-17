@@ -1,5 +1,8 @@
 {
-"rewrites": [
-  { "source": "/(.*)", "destination": "/level1.html" }
-]
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/level1.html"
+        }
+    ]
 }
